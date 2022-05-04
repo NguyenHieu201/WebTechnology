@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+
+<body>
+    <form>
+        <h1 style="text-align: center;">Register form</h1>
+        <table style="margin: auto;">
+            <tr>
+                <td>
+                    Username
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="txt" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone
+                </td>
+                <td>
+                    <input type="text" id="phone">
+                </td>
+            </tr>
+            
+                <td>
+                    <input onclick="send()" type="button" value="Submit">
+                </td>
+                <td>
+                    <input onclick="resetForm()" type="button" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+<script>
+    function send() {
+        var input = document.getElementsByTagName('input');
+        var username = input[0].value;
+        var email = input[1].value;
+        var phone = input[2].value;
+
+
+        var checkEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        var checkPhone = /^(\()?\d{3}(\))?(|\s)?\d{3}(|\s)\d{4}$/;
+        var text="";
+        if(!username){
+            text+="Dòng username không được trống\n";
+        }
+
+        if (!checkEmail.test(email)){
+            text+="Bạn đã nhập email sai định dạng\n";   
+        }
+
+        if(!checkPhone.test(phone)){
+            text+="Bạn đã nhập phone sai định dạng";
+        }
+
+        if(text==""){
+            alert("Bạn đã nhập thông tin thành công");
+            return true;
+        }else{
+            alert(text);
+            return false;
+        }
+
+}
+
+function resetForm() {
+    document.getElementsByTagName('form')[0].reset();
+}
+</script>
+</html>

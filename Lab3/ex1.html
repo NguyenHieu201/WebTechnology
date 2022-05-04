@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+<body>
+    <a href="" style="color:red" onmouseover="para1_in()" onmouseout="para1_out()">1. Red</a>
+    <p id="para_1">Tại cửa ngõ Tây Bắc, trục đường Trường Chinh - Cộng Hòa hướng vào trung tâm thành phố xảy ra tình trạng kẹt xe không lối thoát. Ô tô và xe máy chen chúc di chuyển kín mặt đường. Tại các giao lộ, CSGT túc trực để phân luồng điều tiết giao thông nhưng do lượng phương tiện di chuyển quá lớn nên giao thông vẫn ùn tắc kéo dài khiến lực lượng chức năng khá vất vả để phân luồng.</p>
+    <br>
+    <a href="" style="color:green" onmouseover="para2_in()" onmouseout="para2_out()">2. Green</a>
+    <p id="para_2">Tại cửa ngõ Tây Bắc, trục đường Trường Chinh - Cộng Hòa hướng vào trung tâm thành phố xảy ra tình trạng kẹt xe không lối thoát. Ô tô và xe máy chen chúc di chuyển kín mặt đường. Tại các giao lộ, CSGT túc trực để phân luồng điều tiết giao thông nhưng do lượng phương tiện di chuyển quá lớn nên giao thông vẫn ùn tắc kéo dài khiến lực lượng chức năng khá vất vả để phân luồng.</p>
+    <br>
+    <a href="" style="color:blue" onmouseover="para3_in()" onmouseout="para3_out()">3. Blue</a>
+    <p id="para_3">Tại cửa ngõ Tây Bắc, trục đường Trường Chinh - Cộng Hòa hướng vào trung tâm thành phố xảy ra tình trạng kẹt xe không lối thoát. Ô tô và xe máy chen chúc di chuyển kín mặt đường. Tại các giao lộ, CSGT túc trực để phân luồng điều tiết giao thông nhưng do lượng phương tiện di chuyển quá lớn nên giao thông vẫn ùn tắc kéo dài khiến lực lượng chức năng khá vất vả để phân luồng.</p>
+</body>
+<script>
+    var para1 = document.getElementById("para_1");
+    var para2 = document.getElementById("para_2");
+    var para3 = document.getElementById("para_3");
+
+    function para1_in(){
+        para1.style.color="red";
+    }
+    function para1_out(){
+        para1.style.color="black";
+    }
+
+    function para2_in(){
+        para2.style.color="green";
+    }
+    function para2_out(){
+        para2.style.color="black";
+    }
+
+    function para3_in(){
+        para3.style.color="blue";
+    }
+    function para3_out(){
+        para3.style.color="black";
+    }
+
+</script>
+</html>
+
