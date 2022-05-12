@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>insert</title></head>
+<body>
+<div>
+<form action="insert_table.php" method="get">
+<label>Item description</label><input type="text" name="desc">
+<label>Weight</label><input type="text" name="weight">
+<label>Cost</label><input type="text" name="cost">
+<label>Number Available</label><input type="text" name="num">
+
+<input type="submit" value="Insert">
+
+</form>
+<button type="reset" onClick="handleReset()">Reset</button>
+</div>
+
+</body>
+<script>
+function handleReset(){
+	const desc = document.getElementsByName("desc");
+	const weight = document.getElementsByName("weight");
+	const cost = document.getElementsByName("cost");
+	const num = document.getElementsByName("num");
+	desc[0].value = '';
+	weight[0].value = '';
+	cost[0].value = '';
+	num[0].value = '';
+	
+	
+	
+}
+</script>
+
+</html>
