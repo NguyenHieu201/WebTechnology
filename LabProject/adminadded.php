@@ -11,18 +11,19 @@ try{
 $server = 'localhost';
 $user = 'root';
 $pass = 'ntk14121412';
-$mydb = 'CNWebDatabase';
-$table_name = 'Products';
+$mydb = 'bussiness_service';
+$table_name = 'catagories';
 $connect = mysqli_connect($server, $user, $pass);
-$desc = $_GET["datadesc"];
+$id = $_GET["ID"];
+$desc = $_GET["desc"];
+$tittle = $_GET["tittle"];
 
 if (!$connect) {
     
     die ("Cannot connect to $server using $user");
 } else {
     $sql = "SELECT * from $table_name";
-    $sql2 = "SELECT DISTINCT Product_desc from $table_name";
-    $sql3 = "UPDATE $table_name SET Numb=Numb-1 WHERE (Product_desc = '$desc')";
+    $sqlCmd = "INSERT INTO $table_name VALUES ('0','{$tittle}','{$desc}');";;
    
     mysqli_select_db($connect,$mydb);
    // if (mysqli_query($connect, $sql)) {
@@ -35,7 +36,17 @@ if (!$connect) {
     //}
    
    // $SQLcmd = "INSERT INTO $table_name (ProductID, Product_desc, Cost, Weight, Numb) VALUES ('0','{$desc}','{$cost}','{$weight}','{$num}');";
- 
+    if($id){
+        if(mysqli_query($connect, $sqlCmd)){
+            print $sqlCmd;
+        }
+        else {
+            die ("Table Create Creation Failed SQLcmd=$SQLcmd");
+            
+        }
+        
+    }
+    
     
     
     if (!mysqli_query($connect,$sql)){
@@ -44,14 +55,8 @@ if (!$connect) {
        
         
     } else {
-        print "SELECT PRODUCT WE'VE JUST SOLD:  ";
-        $result2 = mysqli_query($connect,$sql3);
         $result = mysqli_query($connect, $sql);
-        
-        
-        
         print "<br>SQLcmd=$sql";
-        
         
         
         
@@ -64,39 +69,39 @@ if (!$connect) {
     
 }
 ?>
-
+<form action="adminadded.php" method="get">
 <table border ="1" cellspacing="0" cellpadding="10">
-        
         <tr>
-        <th>ProductId</th>
-        <th>Product desc</th>
-        <th>const</th>
-        <th>number available</th>
-        <th>Weight</th>
+        <th>CatagoriesId</th>
+        <th>Tittle</th>
+        <th>Description</th>
+        
         </tr>
         <?php
-        
         if (mysqli_num_rows($result) > 0) {
             $sn=1;
             while($data = mysqli_fetch_assoc($result)) {
                 ?>
  <tr>
    
-   <td><?php echo $data['ProductID']; ?> </td>
-   <td><?php echo $data['Product_desc']; ?> </td>
-   <td><?php echo $data['Cost']; ?> </td>
-   <td><?php echo $data['Numb']; ?> </td>
-   <td><?php echo $data['Weight']; ?> </td>
-
+   <td><?php echo $data['CatagoriesID']; ?> </td>
+   <td><?php echo $data['Tittle']; ?> </td>
+   <td><?php echo $data['Description']; ?> </td>
+  
  <tr>
  <?php
   $sn++;}} else { ?>
     <tr>
      <td colspan="8">No data found</td>
     </tr>
- <?php } 
- ?>
- 
+ <?php } ?>
+ <tr>
+ <td><input name="ID"></td>
+ <td><input name = "tittle"></td>
+ <td><input name="desc"></td>
+ </tr>
  </table>
+ <input type="submit" value="Add catagories">
+ </form>
 </body>
 </html> 
