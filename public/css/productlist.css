@@ -1,0 +1,64 @@
+table {
+    table-layout: fixed;
+    width: 100%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 17px;
+  }
+  
+td {
+    border: 2px solid black;
+    word-wrap: break-word;
+}
+thead{
+    background-color:darkslategray;
+    min-height: 70px;
+    color: #fff;
+    font-size: 19px;
+  }
+table a{
+    text-decoration: none;
+}
+.button1 {
+background-color: #C2FBD7;
+border-radius: 50px;
+border-width: 0;
+box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+color: #008000;
+cursor: pointer;
+display: inline-block;
+font-family: Arial, sans-serif;
+font-size: 1em;
+height: 50px;
+padding: 0 25px;
+transition: all 200ms;
+}
+
+.button1 a{
+    text-decoration: none;
+    color: black;
+}
+button:hover{
+    background-color: #AFE6C3;
+transform: scale(1.05);
+}
+
+input{
+    width: 300px;
+    height: 34px;
+    float: right;
+
+}
+
+.logout-btn {
+    float: right;
+    width: 45px;
+    height: 34px';
+}
+
+input:hover{
+    margin: 12px;
+    transform: scale(1.05);
+    color: black;
+}
+

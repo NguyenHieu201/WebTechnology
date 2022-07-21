@@ -1,0 +1,25 @@
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.login {
+  margin: 0 auto;
+  display: block;
+  height: 500px;
+  width: 50%;
+}
+
+input[type=username], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-form {
+  margin: 50px auto;
+}

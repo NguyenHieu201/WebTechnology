@@ -1,0 +1,115 @@
+.img{
+  width: 20vh;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  width:20vh ;
+  height: 30vh;
+  text-align: center;
+}
+
+.itemcart{
+  height: 100%;
+  align-items: center;
+  display:
+  block;
+  justify-items: center;
+  justify-content:
+  start;
+  margin-left: 15%;
+}
+td{
+  text-align: center;
+}
+.sp{
+  width: 40vh;
+  text-align: center;
+  background-color: crimson;
+  height: 3vh;
+  color: white;
+  font-weight: bold;
+}
+.slpicker{
+  width: 6vh;
+  border: black 1px;
+
+}
+.dg{
+  color: white;
+  width: 20vh;
+  text-align: center;
+  background-color: crimson;
+  font-weight: bold;
+}
+.sl{
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width: 20vh;
+  background-color: crimson;
+}
+.ha{
+  font-weight: bold;
+  color: white;
+  background-color: crimson;
+}
+input.quantity{
+  height: 3vh;
+}
+input.quantity:focus{
+  border: none;
+  border-style: none;
+}
+table{
+  background-color: white;
+  padding: 1%;
+  margin: 3%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background-color: azure;
+}
+.confirmation{
+  text-decoration: none;
+  width: 100%;
+  height: 5vh;
+  color:white;
+  background-color: crimson;
+  border: none;
+}
+.confirmation:hover{
+  
+  background-color:brown;
+}
+.totalnumber{
+  width: 100%;
+  height: 3vh;
+  font-weight: bold;
+
+}
+.sidebar{
+  width: 10%;
+  padding: 5%;
+
+}
+.price{
+  width:20vh ;
+  height: 30vh;
+  text-align: center;
+}
+.name{
+  width:20vh ;
+  height: 30vh;
+  text-align: center;
+}
+.soluong{
+  width:20vh ;
+  height: 30vh;
+  text-align: center;
+}
+.deletebutton{
+  width:20vh ;
+  height: 30vh;
+  text-align: center;
+}

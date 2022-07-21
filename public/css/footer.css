@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .container .contentfooter{
+    margin-right: 30px;
+}
+
+footer  .container .contentfooter.about{
+    width:40%;
+}
+footer .container .contentfooter.about h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .container .contentfooter.about h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+
+footer .container .contentfooter.about p{
+    color: #999;
+}
+
+.links h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+
+.links h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background: #f00;
+ }
+.links{
+    position: relative;
+    width: 25%;
+ }
+ .links ul li{
+     list-style: none;
+ }
+ .links ul li a{
+     color: #999;
+     text-decoration: none;
+     margin-bottom: 10px;
+     display: inline-block;
+ }
+.links ul li a:hover{
+     color: #fff;
+ }
+
+
+
+
+

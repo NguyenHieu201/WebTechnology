@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+
+   
+
+   Options +FollowSymLinks
+
+   RewriteEngine on
+
+   # Send request via index.php
+
+   RewriteCond %{REQUEST_FILENAME} !-f
+
+   RewriteCond %{REQUEST_FILENAME} !-d
+
+   RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+   RewriteCond %{REQUEST_URI} ^(.*)/(.*).(css)$
+   RewriteRule ^(.*)/(.*).css$ public/css/$2.css
+
+   RewriteCond %{REQUEST_URI} ^(.*)/(.*).(js)$
+   RewriteRule ^(.*)/(.*).js$ public/js/$2.js
+
+   RewriteCond %{REQUEST_URI} ^(.*)/(.*).(png)$
+   RewriteRule ^(.*)/(.*).png$ public/img/$2.png
+
+
+</IfModule>
